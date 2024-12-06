@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Start</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="generator" content="Geany 1.37.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+    ></script>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        filter: brightness(0.8);
+      }
+
+      .model-content {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .model-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        height: calc(100vh - 80px);
+        background-color: transparent;
+      }
+
+      model-viewer {
+        width: 30%;
+        height: 500px;
+        background-color: transparent;
+      }
+    </style>
+  </head>
+
+  <body>
+    <video class="background-video" autoplay muted loop>
+      <source src="bg2-gradient.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="model-content">
+      <model-viewer
+        src="scene.glb"
+        alt="3D Model"
+        shadow-intensity="1"
+        camera-controls
+        auto-rotate
+        ar
+        exposure="1.0"
+        field-of-view="50deg"
+        background-color="transparent"
+        style="width: 100%; height: 945px"
+      ></model-viewer>
+    </div>
+  </body>
+</html>

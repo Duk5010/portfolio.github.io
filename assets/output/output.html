@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Output</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+    ></script>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+      body {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        filter: brightness(0.8);
+      }
+
+      .header {
+        width: 100%;
+        text-align: center;
+        font-size: 36px;
+        font-weight: bold;
+        color: white;
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+
+      .model-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px;
+        box-sizing: border-box;
+        margin-top: 100px;
+      }
+
+      model-viewer {
+        width: 100%;
+        height: 300px;
+        aspect-ratio: 1 / 1;
+        background-color: transparent;
+        position: relative;
+      }
+
+      .description {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease-in-out;
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+        width: 80%;
+      }
+
+      @media (max-width: 768px) {
+        .header {
+          font-size: 24px;
+        }
+
+        .description {
+          font-size: 14px;
+        }
+
+        .model-container {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Background Video -->
+    <video class="background-video" autoplay muted loop>
+      <source src="bg2-gradient.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="header">
+      <h1>Output</h1>
+    </div>
+
+    <div class="model-container">
+      <!-- First 3D Model  -->
+      <model-viewer
+        src="monitor.glb"
+        alt="3D monitor Model"
+        shadow-intensity="1"
+        camera-controls
+        auto-rotate
+        interaction-prompt="none"
+        camera-orbit="0deg 75deg auto"
+        min-camera-orbit="auto auto 10m"
+        max-camera-orbit="aur auto max"
+        style="width: 100%; height: 300px"
+      >
+        <div class="description">Monitor: Displays the computer's output.</div>
+      </model-viewer>
+
+      <!-- Second 3D Model  -->
+      <model-viewer
+        src="speakers.glb"
+        alt="3D speakers Model"
+        shadow-intensity="1"
+        camera-controls
+        auto-rotate
+        interaction-prompt="none"
+        camera-orbit="0deg 75deg auto"
+        min-camera-orbit="auto auto 10m"
+        max-camera-orbit="aur auto max"
+        style="width: 100%; height: 300px"
+      >
+        <div class="description">Speakers: Output audio for sound.</div>
+      </model-viewer>
+    </div>
+
+    <script>
+      const models = document.querySelectorAll("model-viewer");
+      let hoverTimeout;
+
+      models.forEach((model) => {
+        model.addEventListener("mouseenter", () => {
+          hoverTimeout = setTimeout(() => {
+            const desc = model.querySelector(".description");
+            if (desc) {
+              desc.style.opacity = 1;
+            }
+          }, 2000);
+        });
+
+        model.addEventListener("mouseleave", () => {
+          clearTimeout(hoverTimeout);
+          const desc = model.querySelector(".description");
+          if (desc) {
+            desc.style.opacity = 0;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

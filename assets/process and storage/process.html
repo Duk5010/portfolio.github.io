@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Process</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+      body {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        filter: brightness(0.8);
+      }
+
+      .header {
+        width: 100%;
+        text-align: center;
+        font-size: 36px;
+        font-weight: bold;
+        color: white;
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+
+      .model-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px;
+        box-sizing: border-box;
+        margin-top: 100px;
+        overflow: hidden;
+      }
+
+      model-viewer {
+        width: 100%;
+        height: 300px;
+        aspect-ratio: 1 / 1;
+        background-color: transparent;
+        position: relative;
+      }
+
+      .description {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease-in-out;
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+        width: 80%;
+      }
+
+      .centered-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        grid-column: span 3;
+        margin-top: 20px;
+      }
+
+      @media (max-width: 768px) {
+        .header {
+          font-size: 24px;
+        }
+
+        .description {
+          font-size: 14px;
+        }
+
+        .model-container {
+          grid-template-columns: 1fr;
+        }
+
+        .centered-container {
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <video class="background-video" autoplay muted loop>
+      <source src="bg2-gradient.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="header">
+      <h1>Process and Storage</h1>
+    </div>
+
+    <div class="model-container">
+      <model-viewer
+        src="cooling-fan.glb"
+        alt="3D Cooling Fan Model"
+        camera-controls
+        auto-rotate
+      >
+        <div class="description">
+          Cooling Fan: Prevents overheating of components.
+        </div>
+      </model-viewer>
+
+      <model-viewer
+        src="cpu-cooler.glb"
+        alt="3D CPU Cooler Model"
+        camera-controls
+        auto-rotate
+      >
+        <div class="description">
+          CPU Cooler: Cools down the processor for optimal performance.
+        </div>
+      </model-viewer>
+
+      <model-viewer
+        src="video-card.glb"
+        alt="3D Video Card Model"
+        camera-controls
+        auto-rotate
+      >
+        <div class="description">
+          Video Card: Renders graphics for display output.
+        </div>
+      </model-viewer>
+
+      <model-viewer
+        src="ram.glb"
+        alt="3D RAM Model"
+        camera-controls
+        auto-rotate
+      >
+        <div class="description">
+          RAM: Temporary memory for quick data access.
+        </div>
+      </model-viewer>
+
+      <model-viewer
+        src="power-supply.glb"
+        alt="3D Power Supply Model"
+        camera-controls
+        auto-rotate
+      >
+        <div class="description">
+          Power Supply: Provides power to all components.
+        </div>
+      </model-viewer>
+
+      <model-viewer
+        src="motherboard.glb"
+        alt="3D Motherboard Model"
+        camera-controls
+        auto-rotate
+      >
+        <div class="description">
+          Motherboard: Connects and allows communication between components.
+        </div>
+      </model-viewer>
+
+      <!-- Added SSD and CPU side by side -->
+      <div class="centered-container">
+        <model-viewer
+          src="cpu.glb"
+          alt="3D CPU Model"
+          camera-controls
+          auto-rotate
+        >
+          <div class="description">
+            CPU: The brain of the computer, processes instructions and tasks.
+          </div>
+        </model-viewer>
+
+        <model-viewer
+          src="ssd.glb"
+          alt="3D SSD Model"
+          camera-controls
+          auto-rotate
+        >
+          <div class="description">
+            SSD: A storage device for faster data retrieval and storage.
+          </div>
+        </model-viewer>
+      </div>
+    </div>
+
+    <script>
+      const models = document.querySelectorAll("model-viewer");
+      let hoverTimeout;
+
+      models.forEach((model) => {
+        model.addEventListener("mouseenter", () => {
+          hoverTimeout = setTimeout(() => {
+            const desc = model.querySelector(".description");
+            if (desc) {
+              desc.style.opacity = 1;
+            }
+          }, 2000);
+        });
+
+        model.addEventListener("mouseleave", () => {
+          clearTimeout(hoverTimeout);
+          const desc = model.querySelector(".description");
+          if (desc) {
+            desc.style.opacity = 0;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
