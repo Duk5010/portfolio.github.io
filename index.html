@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+
+    <!-- External JavaScript -->
+    <script type="text/javascript" src="script.js" defer></script>
+
+    <!-- Google Fonts (Material Symbols Outlined) -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward"
+    />
+
+    <!-- SwiperJS CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Logo -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Header Navigation -->
+    <div class="header-nav-container">
+      <nav>
+        <a href="#about">About</a>
+        <a href="#project-topics">Project Topics</a>
+        <a href="#contacts">Contact</a>
+        <button id="theme-switch" class="nav-button">
+          <!-- Light Mode Icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#e8eaed"
+          >
+            <path
+              d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"
+            />
+          </svg>
+
+          <!-- Dark Mode Icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+          >
+            <path
+              d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"
+            />
+          </svg>
+        </button>
+      </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+      <video id="hero-video" autoplay muted loop>
+        <source src="assets/videos/bg1-gradient.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero-content">
+        <h1>Welcome to My Portfolio</h1>
+        <p>I'm Prince, a IS Student and I love website developer.</p>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+      <!-- About Section -->
+      <div id="about">
+        <h1 class="fade-in">About Me</h1>
+
+        <div class="about-content fade-in">
+          <div class="me-image">
+            <img
+              src="assets/images/me.jpg"
+              alt="Temporary placeholder image"
+              width="350"
+              height="350"
+            />
+          </div>
+
+          <p class="fade-in">
+            Hello! I’m Prince Magdadaro, I'm currently a BS Information Systems
+            student at the University of San Carlos. I’m passionate about
+            technology, creativity and design. My goal is to become a skilled
+            <strong>IT professional</strong>
+            and <strong>website developer</strong>. I enjoy crafting
+            user-friendly and visually appealing websites and I'm constantly
+            learning new skills to achieve that dream. <br /><br />
+            Want to contact me?
+            <a href="mailto:princejosephmagdadaro@gmail.com" class="email-me">
+              Email me.
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Project Topics Section -->
+      <div id="project-topics" class="fade-in">
+        <div class="project-topics-content">
+          <h1>Project Topics</h1>
+          <p>Explore various creative outputs that I have worked on.</p>
+
+          <div class="container swiper">
+            <div class="card-wrapper">
+              <ul class="card-list swiper-wrapper">
+                <!-- Topic 1 -->
+
+                <li
+                  class="card-item swiper-slide"
+                  alt="1"
+                  onclick="openModal('modal1')"
+                >
+                  <div class="card-link">
+                    <img
+                      src="assets/images/1/1-thumbnail.png"
+                      alt="image 1"
+                      class="card-image"
+                    />
+                    <p class="badge visual-infographic">Visual Infographic</p>
+                    <h2 class="card-title">Data, Information, and Knowledge</h2>
+                    <button class="card-button material-symbols-outlined">
+                      arrow_forward
+                    </button>
+                  </div>
+                </li>
+
+                <!-- Topic 2 -->
+                <li
+                  class="card-item swiper-slide"
+                  alt="2"
+                  onclick="openModal('modal2')"
+                >
+                  <div class="card-link">
+                    <img
+                      src="assets/images/2/2-thumbnail.png"
+                      alt="image 2"
+                      class="card-image"
+                    />
+                    <p class="badge mind-map">Mind Map</p>
+                    <h2 class="card-title">
+                      Various Uses of Computer Systems in the Modern World
+                    </h2>
+                    <button class="card-button material-symbols-outlined">
+                      arrow_forward
+                    </button>
+                  </div>
+                </li>
+
+                <!-- Topic 3 -->
+                <li
+                  class="card-item swiper-slide"
+                  alt="3"
+                  onclick="openModal('modal3')"
+                >
+                  <div class="card-link">
+                    <img
+                      src="assets/images/3/3-thumnail.png"
+                      alt="image 3"
+                      class="card-image"
+                    />
+                    <p class="badge storyboard">Storyboard</p>
+                    <h2 class="card-title">
+                      Various Uses of Computer Systems in the Modern World
+                    </h2>
+                    <button class="card-button material-symbols-outlined">
+                      arrow_forward
+                    </button>
+                  </div>
+                </li>
+
+                <!-- Topic 4 -->
+                <li
+                  class="card-item swiper-slide"
+                  alt="4"
+                  onclick="openModal('modal4')"
+                >
+                  <div class="card-link">
+                    <img
+                      src="assets/images/4/4-thumnail.png"
+                      alt="image 4"
+                      class="card-image"
+                    />
+                    <p class="badge flowchart">Flowchart</p>
+                    <h2 class="card-title">
+                      Algorithm, Pseudocode, and Flowcharting
+                    </h2>
+                    <button class="card-button material-symbols-outlined">
+                      arrow_forward
+                    </button>
+                  </div>
+                </li>
+
+                <!-- Topic 5 -->
+                <li
+                  class="card-item swiper-slide"
+                  alt="5"
+                  onclick="openModal('modal5')"
+                >
+                  <div class="card-link">
+                    <img
+                      src="assets/images/5/5-thumbnail.png"
+                      alt="image 5"
+                      class="card-image"
+                    />
+                    <p class="badge poster">Poster</p>
+                    <h2 class="card-title">Concept of Number Systems</h2>
+                    <button class="card-button material-symbols-outlined">
+                      arrow_forward
+                    </button>
+                  </div>
+                </li>
+
+                <!-- Topic 6 -->
+                <li
+                  class="card-item swiper-slide"
+                  alt="6"
+                  onclick="openModal('modal6')"
+                >
+                  <div class="card-link">
+                    <img
+                      src="assets/images/6/6-thumbnail.png"
+                      alt="image 6"
+                      class="card-image"
+                    />
+                    <p class="badge brochure">Brochure</p>
+                    <h2 class="card-title">
+                      General and Specific Purpose Software
+                    </h2>
+                    <button class="card-button material-symbols-outlined">
+                      arrow_forward
+                    </button>
+                  </div>
+                </li>
+
+                <!-- Topic 7 -->
+                <li
+                  class="card-item swiper-slide"
+                  alt="7"
+                  onclick="openModal('modal7')"
+                >
+                  <div class="card-link">
+                    <img
+                      src="assets/images/7/7-thumbnail.png"
+                      alt="image 7"
+                      class="card-image"
+                    />
+                    <p class="badge model">3D Model</p>
+                    <h2 class="card-title">
+                      IPOS Devices, Internal and External Parts
+                    </h2>
+                    <button class="card-button material-symbols-outlined">
+                      arrow_forward
+                    </button>
+                  </div>
+                </li>
+
+                <!-- Topic 8 -->
+                <li
+                  class="card-item swiper-slide"
+                  alt="8"
+                  onclick="openModal('modal8')"
+                >
+                  <div class="card-link">
+                    <img
+                      src="assets/images/8/8-thumbnail.png"
+                      alt="image 8"
+                      class="card-image"
+                    />
+                    <p class="badge booklet">Booklet</p>
+                    <h2 class="card-title">
+                      Software Application Types: Utilities
+                    </h2>
+                    <button class="card-button material-symbols-outlined">
+                      arrow_forward
+                    </button>
+                  </div>
+                </li>
+
+                <!-- Topic 9 -->
+                <li
+                  class="card-item swiper-slide"
+                  alt="9"
+                  onclick="openModal('modal9')"
+                >
+                  <div class="card-link">
+                    <img
+                      src="assets/images/9/9-thumbnail.png"
+                      alt="image 9"
+                      class="card-image"
+                    />
+                    <p class="badge database">Database</p>
+                    <h2 class="card-title">
+                      Basic Concepts and Definitions of Data and Database
+                    </h2>
+                    <button class="card-button material-symbols-outlined">
+                      arrow_forward
+                    </button>
+                  </div>
+                </li>
+
+                <!-- Topic 10 -->
+                <li
+                  class="card-item swiper-slide"
+                  alt="10"
+                  onclick="openModal('modal10')"
+                >
+                  <div class="card-link">
+                    <img
+                      src="assets/images/10/10-thumbnail.png"
+                      alt="image 10"
+                      class="card-image"
+                    />
+                    <p class="badge network-diagram">Network Diagram</p>
+                    <h2 class="card-title">
+                      Basic Concepts of Computer Networks
+                    </h2>
+                    <button class="card-button material-symbols-outlined">
+                      arrow_forward
+                    </button>
+                  </div>
+                </li>
+
+                <!-- Topic 11 -->
+                <li
+                  class="card-item swiper-slide"
+                  alt="11"
+                  onclick="openModal('modal11')"
+                >
+                  <div class="card-link">
+                    <img
+                      src="assets/images/11/11-thumbnail.png"
+                      alt="image 11"
+                      class="card-image"
+                    />
+                    <p class="badge comic-strip">Comic Strip</p>
+                    <h2 class="card-title">
+                      Security, Ethics, and Privacy: IT Code of Ethics
+                    </h2>
+                    <button class="card-button material-symbols-outlined">
+                      arrow_forward
+                    </button>
+                  </div>
+                </li>
+
+                <!-- Topic 12 -->
+                <li
+                  class="card-item swiper-slide"
+                  alt="12"
+                  onclick="openModal('modal12')"
+                >
+                  <div class="card-link">
+                    <img
+                      src="assets/images/12/12-thumbnail.png"
+                      alt="image 12"
+                      class="card-image"
+                    />
+                    <p class="badge html">HTML</p>
+                    <h2 class="card-title">HTML Programming</h2>
+                    <button class="card-button material-symbols-outlined">
+                      arrow_forward
+                    </button>
+                  </div>
+                </li>
+
+                <!-- Topic 13 -->
+                <li
+                  class="card-item swiper-slide"
+                  alt="13"
+                  onclick="openModal('modal13')"
+                >
+                  <div class="card-link">
+                    <img
+                      src="assets/images/13/13-thumbnail.png"
+                      alt="image 13"
+                      class="card-image"
+                    />
+                    <p class="badge html-css">HTML & CSS</p>
+                    <h2 class="card-title">CSS Programming</h2>
+                    <button class="card-button material-symbols-outlined">
+                      arrow_forward
+                    </button>
+                  </div>
+                </li>
+
+                <!-- Topic 14 -->
+                <li
+                  class="card-item swiper-slide"
+                  alt="14"
+                  onclick="openModal('modal14')"
+                >
+                  <div class="card-link">
+                    <img
+                      src="assets/images/14/14-thumbnail.png"
+                      alt="image 14"
+                      class="card-image"
+                    />
+                    <p class="badge story">Interactive Story</p>
+                    <h2 class="card-title">Generative AI and Data Analytics</h2>
+                    <button class="card-button material-symbols-outlined">
+                      arrow_forward
+                    </button>
+                  </div>
+                </li>
+              </ul>
+
+              <!-- Swiper Pagination-->
+              <div class="swiper-pagination"></div>
+
+              <!-- Navigation Buttons for Pagination-->
+              <div class="swiper-slide-button swiper-button-prev"></div>
+              <div class="swiper-slide-button swiper-button-next"></div>
+            </div>
+          </div>
+
+          <!--Modals-->
+          <!-- Modal 1 -->
+          <div id="modal1" class="modal">
+            <div class="modal-card">
+              <span class="modal-close" onclick="closeModal('modal1')"
+                >&times;</span
+              >
+              <div class="popup-swiper swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="assets/images/1/1.png" alt="Slide 1" />
+                  </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+              </div>
+
+              <div class="modal-content">
+                <h3 class="modal-title">
+                  Concepts and Definitions of Information Systems: Data,
+                  Information, and Knowledge
+                </h3>
+                <div class="modal-info">
+                  <p>
+                    Data are raw facts without context (e.g., numbers or dates),
+                    processed data that is meaningful (e.g., "John scored 85% in
+                    the exam") and knowledge is understanding and application of
+                    information (e.g., "John’s 85% suggests he’s well-prepared
+                    for future exams").
+                  </p>
+                  <p>
+                    Data to Information is when data becomes information when it
+                    is organized with context while Information to Knowledge is
+                    when information turns into knowledge when applied and
+                    analyzed to make decisions or gain insights.
+                  </p>
+                  <p>
+                    Example: In health, a blood pressure reading of 120/80 mmHg
+                    is data, which becomes information when recognized as normal
+                    blood pressure, and is understood as knowledge when applied
+                    to reduce the risk of heart disease.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal 2 -->
+          <div id="modal2" class="modal modal-overlay">
+            <div class="modal-card">
+              <span class="modal-close" onclick="closeModal('modal2')"
+                >&times;</span
+              >
+              <div class="popup-swiper swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="assets/images/2/2.png" alt="Slide 2" />
+                  </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+              </div>
+
+              <div class="modal-content">
+                <h3 class="modal-title">
+                  Areas of the Computer Science Discipline
+                </h3>
+                <div class="modal-info">
+                  <p>
+                    Software Engineering: Involves designing and maintaining
+                    software systems, impacting technology by creating
+                    efficient, scalable solutions for various industries. Skills
+                    include coding, system design, and project management.
+                  </p>
+                  <p>
+                    Cybersecurity: Protects systems and data from cyber threats,
+                    ensuring privacy and preventing disruptions. Skills unique
+                    to this area include security protocols, threat analysis,
+                    and encryption.
+                  </p>
+                  <p>
+                    Data Science: Analyzes large datasets to extract valuable
+                    insights, improving decision-making across sectors. Skills
+                    include statistical analysis, machine learning, and data
+                    visualization.
+                  </p>
+                  <p>
+                    Artificial Intelligence (AI): Develops machines that mimic
+                    human intelligence, automating tasks and enhancing
+                    productivity. Unique skills include machine learning,
+                    natural language processing, and neural networks.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal 3 -->
+          <div id="modal3" class="modal modal-overlay">
+            <div class="modal-card">
+              <span class="modal-close" onclick="closeModal('modal3')"
+                >&times;</span
+              >
+              <div class="popup-swiper swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="assets/images/3/3-thumnail.png" alt="Slide 3" />
+                  </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+              </div>
+
+              <div class="modal-content">
+                <h3 class="modal-title">
+                  Various Uses of Computer Systems in the Modern World
+                </h3>
+                <div class="modal-info">
+                  Computer systems are used in healthcare for patient
+                  management, in finance for transactions and analysis, in
+                  manufacturing for production control, in education for online
+                  learning, and in retail for e-commerce and inventory
+                  management; they’ve revolutionized work and daily life by
+                  automating tasks, improving communication, and enabling
+                  conveniences like online shopping and remote work, while
+                  future uses include AI for task automation, quantum computing
+                  for complex problem-solving, blockchain for secure
+                  transactions, and IoT for creating smart cities and enhancing
+                  services.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal 4 -->
+          <div id="modal4" class="modal modal-overlay">
+            <div class="modal-card">
+              <span class="modal-close" onclick="closeModal('modal4')"
+                >&times;</span
+              >
+              <div class="popup-swiper swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="assets/images/4/4b.png" alt="Slide 4" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/images/4/4c.png" alt="Slide 4" />
+                  </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+              </div>
+
+              <div class="modal-content">
+                <h3 class="modal-title">
+                  Algorithm, Pseudocode, and Flowcharting
+                </h3>
+                <div class="modal-info">
+                  <p>
+                    Algorithms provide a step-by-step method for solving
+                    problems efficiently. Pseudocode and flowcharts help in
+                    programming by simplifying the process: pseudocode uses
+                    plain language to outline logic, making it easier to
+                    translate into code, while flowcharts visually represent the
+                    sequence of steps and decisions in a program. The main
+                    difference is that pseudocode is text-based and focuses on
+                    logic, while flowcharts are diagrammatic, using symbols to
+                    illustrate the flow of a program.
+                  </p>
+                  <p>
+                    Base from the picture beside the process of making a cofee
+                    could be automated with a smart coffee machine. The machine
+                    could be programmed to handle all steps, allowing
+                    customization for milk and sugar preferences through a
+                    digital interface or an app. This reduces manual effort and
+                    ensures consistency in every cup.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal 5 -->
+          <div id="modal5" class="modal modal-overlay">
+            <div class="modal-card">
+              <span class="modal-close" onclick="closeModal('modal5')"
+                >&times;</span
+              >
+
+              <div class="popup-swiper swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="assets/images/5/5-thumbnail.png" alt="Slide 5" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="assets/images/5/binary-to-decimal.png"
+                      alt="Slide 5"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="assets/images/5/decimal-to-binary.png"
+                      alt="Slide 5"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="assets/images/5/hexadecimal-to-decimal.png"
+                      alt="Slide 5"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="assets/images/5/decimal-to-hexadecimal.png"
+                      alt="Slide 5"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="assets/images/5/hexadecimal-to-binary.png"
+                      alt="Slide 5"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="assets/images/5/binary-to-hexadecimal.png"
+                      alt="Slide 5"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="assets/images/5/real-life-examples.png"
+                      alt="Slide 5"
+                    />
+                  </div>
+                </div>
+
+                <!-- Swiper Pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- Navigation Buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+
+              <div class="modal-content">
+                <h3 class="modal-title">Concept of Number Systems</h3>
+                <div class="modal-info">
+                  <p>
+                    The common number systems used in computing are binary (base
+                    2), decimal (base 10), and hexadecimal (base 16).
+                    Conversions between these systems involve processes such as
+                    multiplying binary digits by powers of 2 to get decimal,
+                    dividing decimal numbers by 2 to get binary, and grouping
+                    binary digits into sets of four to convert to hexadecimal.
+                    The binary system is essential for computers because it
+                    represents data using two states (on/off or 0/1), which
+                    aligns with how electronic circuits and processors function,
+                    making it the fundamental system for computing operations.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal 6 -->
+          <div id="modal6" class="modal modal-overlay">
+            <div class="modal-card">
+              <span class="modal-close" onclick="closeModal('modal6')"
+                >&times;</span
+              >
+              <div class="popup-swiper swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="assets/images/6/6a.png" alt="Slide 6" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/images/6/6b.png" alt="Slide 6" />
+                  </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+
+              <div class="modal-content">
+                <h3 class="modal-title">
+                  General and Specific Purpose Software
+                </h3>
+                <div class="modal-info">
+                  <p>
+                    General-purpose software is designed for a wide range of
+                    tasks (e.g., Microsoft Word, Google Chrome), catering to
+                    various user needs, while specific-purpose software is
+                    tailored to specialized tasks (e.g., Adobe Photoshop,
+                    AutoCAD), meeting the unique requirements of particular
+                    industries or professions.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal 7  -->
+          <div id="modal7" class="modal modal-overlay">
+            <div class="modal-card">
+              <span class="modal-close" onclick="closeModal('modal7')"
+                >&times;</span
+              >
+              <div class="popup-swiper swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="assets/images/7/7-thumbnail.png" alt="Slide 7" />
+                  </div>
+                  <div class="swiper-slide">
+                    <iframe
+                      src="assets/start/start.html"
+                      width="100%"
+                      height="500px"
+                    ></iframe>
+                  </div>
+                  <div class="swiper-slide">
+                    <iframe
+                      src="assets/input/input.html"
+                      width="100%"
+                      height="500px"
+                    ></iframe>
+                  </div>
+                  <div class="swiper-slide">
+                    <iframe
+                      src="assets/process and storage/process.html"
+                      width="100%"
+                      height="500px"
+                    ></iframe>
+                  </div>
+                  <div class="swiper-slide">
+                    <iframe
+                      src="assets/output/output.html"
+                      width="100%"
+                      height="500px"
+                    ></iframe>
+                  </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+
+              <div class="modal-content">
+                <h3 class="modal-title">
+                  IPOS Devices, Internal and External Parts
+                </h3>
+                <div class="modal-info">
+                  <p>
+                    The main components involved in the
+                    Input-Process-Output-Storage (IPOS) cycle include input
+                    devices(such as a keyboard and mouse), which allow data
+                    entry; the processing unit (CPU), which performs
+                    calculations and executes instructions; output devices (such
+                    as monitors and printers), which display or present the
+                    processed data and storage devices(such as hard drives and
+                    SSDs), which store data for future use. Internal hardware
+                    components like the CPU, RAM, and motherboard facilitate the
+                    processing, storage, and transfer of data within the
+                    computer, while external components like input and output
+                    devices enable interaction between the user and the system.
+                    Each component plays a crucial role: input devices gather
+                    data, the CPU processes it, output devices display results,
+                    and storage devices ensure data persistence.
+                  </p>
+                  <p>
+                    Note! In the 3D model, left click for rotating, right click
+                    for moving in the x & y direction and scroll button for z
+                    direction.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal 8 -->
+          <div id="modal8" class="modal modal-overlay">
+            <div class="modal-card">
+              <span class="modal-close" onclick="closeModal('modal8')"
+                >&times;</span
+              >
+              <div class="popup-swiper swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="assets/images/8/8a.png" alt="Slide 8" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/images/8/8b.png" alt="Slide 8" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/images/8/8c.png" alt="Slide 8" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/images/8/8d.png" alt="Slide 8" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/images/8/8e.png" alt="Slide 8" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/images/8/8f.png" alt="Slide 8" />
+                  </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+
+              <div class="modal-content">
+                <h3 class="modal-title">
+                  Software Application Types: Utilities
+                </h3>
+                <div class="modal-info">
+                  <p>
+                    Utility software includes various tools designed to
+                    maintain, optimize, and protect computer systems. Antivirus
+                    software, such as Norton, safeguards systems from malware
+                    and viruses, enhancing security. Backup software, like
+                    Acronis True Image, creates copies of important data to
+                    ensure recovery in case of failure. File compression tools,
+                    such as WinRAR, reduce file sizes, saving storage space and
+                    improving file transfer efficiency. Productivity apps, like
+                    Microsoft Office, boost user efficiency by aiding in tasks
+                    like document creation and data management. Each type plays
+                    a vital role in ensuring system performance, security, and
+                    ease of use.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal 9 -->
+          <div id="modal9" class="modal modal-overlay">
+            <div class="modal-card">
+              <span class="modal-close" onclick="closeModal('modal9')"
+                >&times;</span
+              >
+              <div class="popup-swiper swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="assets/images/9/9.png" alt="Slide 9" />
+                  </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+
+              <div class="modal-content">
+                <h3 class="modal-title">
+                  Basic Concepts and Definitions of Data and Database
+                </h3>
+                <div class="modal-info">
+                  <p>
+                    A database is a structured collection of data designed to
+                    store, manage, and retrieve information efficiently. It is
+                    typically organized into tables with rows and columns, where
+                    each table stores data related to a specific category, and
+                    the columns define the types of data stored. Data storage in
+                    traditional files is simpler, often using flat files where
+                    information is stored sequentially, making it harder to
+                    manage and retrieve. In contrast, databases allow for
+                    complex relationships between data, supporting queries,
+                    indexing, and more efficient data retrieval. The advantages
+                    of using databases include improved data integrity, faster
+                    data retrieval, scalability, and easier management of large
+                    volumes of data, which are essential for supporting business
+                    operations and decision-making.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal 10 -->
+          <div id="modal10" class="modal modal-overlay">
+            <div class="modal-card">
+              <span class="modal-close" onclick="closeModal('modal10')"
+                >&times;</span
+              >
+              <div class="popup-swiper swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="assets/images/10/10.png" alt="Slide 10" />
+                  </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+
+              <div class="modal-content">
+                <h3 class="modal-title">Basic Concepts of Computer Networks</h3>
+                <div class="modal-info">
+                  <p>
+                    Network topologies like bus, star, ring, and mesh define
+                    device arrangements. LAN (local), WAN (wide), and MAN
+                    (metropolitan) differ in scope. Key tools include routers,
+                    switches, firewalls, and network analyzers, which ensure
+                    efficient communication, security, and management.
+                  </p>
+                  <p>
+                    Scenario: At Tech Solutions, the network supports daily
+                    operations, with employees accessing the server for emails,
+                    CRM software, and shared documents. Maria connects
+                    wirelessly in the conference room, while John accesses data
+                    remotely. A robust firewall ensures data security. In the
+                    afternoon, the team prints contracts, and the IT team
+                    monitors network performance for smooth video conferencing
+                    and cloud app access. At day's end, employees save their
+                    work to the server, maintaining secure, efficient, and
+                    flexible operations throughout the day.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal 11 -->
+          <div id="modal11" class="modal modal-overlay">
+            <div class="modal-card">
+              <span class="modal-close" onclick="closeModal('modal11')"
+                >&times;</span
+              >
+              <div class="popup-swiper swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="assets/images/11/11.png" alt="Slide 11" />
+                  </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+
+              <div class="modal-content">
+                <h3 class="modal-title">Basic Concepts of Computer Networks</h3>
+                <div class="modal-info">
+                  <p>
+                    Common ethical concerns in IT include data privacy,
+                    cybersecurity, and intellectual property rights. Security
+                    and privacy considerations affect how sensitive data is
+                    handled, stored, and shared, ensuring trust and compliance.
+                    The IT Code of Ethics guides professionals to make
+                    responsible decisions, promoting fairness, privacy, and
+                    security in technology use.
+                  </p>
+
+                  <p>
+                    <strong>Scenario: Resolving a Security Breach</strong>
+                    "TechSecure" discovers a security breach compromising
+                    customer data.
+                    <br />
+                    Ethical Principles in Action: <br />
+                    <strong>Accountability</strong> The IT team, led by Alex,
+                    reports the breach immediately and documents all actions.
+                    <br /><strong>Integrity:</strong> The team communicates
+                    transparently with affected customers, explaining the breach
+                    and steps taken.
+                    <br />
+                    <strong>Privacy and Confidentiality:</strong> Sensitive
+                    information is handled carefully, in compliance with data
+                    protection standards.
+                    <br />
+                    Outcome: By following the IT Code of Ethics, TechSecure
+                    effectively resolves the issue, reinforcing trust and
+                    accountability.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal 12 -->
+          <div id="modal12" class="modal modal-overlay">
+            <div class="modal-card">
+              <span class="modal-close" onclick="closeModal('modal12')"
+                >&times;</span
+              >
+              <div class="popup-swiper swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      src="assets/images/12/12-thumbnail.png"
+                      alt="Slide 12"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/images/12/12a.png" alt="Slide 12" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/images/12/12b.png" alt="Slide 12" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/images/12/12b.png" alt="Slide 12" />
+                  </div>
+                  <div class="swiper-slide">
+                    <iframe
+                      src="assets/html/12/12.html"
+                      width="100%"
+                      height="500px"
+                    ></iframe>
+                  </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+
+              <div class="modal-content">
+                <h3 class="modal-title">HTML Programming</h3>
+                <div class="modal-info">
+                  <p>
+                    An HTML document follows a basic structure, starting with
+                    the &lt;!DOCTYPE html&gt; declaration, followed by the
+                    &lt;html&gt; element. Inside the &lt;html&gt; element, there
+                    are two main sections: the &lt;head&gt; (which contains
+                    meta-information like the title, character encoding, and
+                    linked resources) and the &lt;body&gt; (which contains the
+                    visible content of the webpage).
+                    <br />
+                    HTML tags are used to define the structure and content of a
+                    webpage. Tags typically come in pairs: an opening tag (e.g.,
+                    &lt;p&gt;) and a closing tag (e.g., &lt;/p&gt;). The content
+                    placed between these tags is affected by their function,
+                    such as creating paragraphs, headings, lists, links, images,
+                    and more.
+                    <br />
+                    Common HTML tags include &lt;html&gt; (defines the
+                    document), &lt;head&gt; (contains meta-info), &lt;body&gt;
+                    (visible content), &lt;h1&gt;, &lt;h2&gt; (headings),
+                    &lt;p&gt; (paragraph), &lt;a&gt; (hyperlinks), &lt;img&gt;
+                    (images), &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt; (lists), and
+                    &lt;div&gt; (groups content for styling/layout).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal 13 -->
+          <div id="modal13" class="modal">
+            <div class="modal-card">
+              <span class="modal-close" onclick="closeModal('modal13')"
+                >&times;</span
+              >
+              <div class="popup-swiper swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      src="assets/images/13/13-thumbnail.png"
+                      alt="Slide 13"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/images/13/13a.png" alt="Slide 13" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/images/13/13b.png" alt="Slide 13" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/images/13/13c.png" alt="Slide 13" />
+                  </div>
+                  <div class="swiper-slide">
+                    <iframe
+                      src="assets/html/13/13.html"
+                      width="100%"
+                      height="500px"
+                    ></iframe>
+                  </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+
+              <div class="modal-content">
+                <h3 class="modal-title">CSS Programming</h3>
+                <div class="modal-info">
+                  <p>
+                    CSS enhances HTML by separating content from presentation,
+                    allowing for greater control over the layout and design of
+                    web pages. The main components of CSS syntax are selectors
+                    (to target elements), properties (to define styles), and
+                    values (to specify the style settings). CSS can be applied
+                    inline, internally, or externally, improving the look and
+                    feel of web pages through better control of colors, fonts,
+                    spacing, and responsiveness.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal 14 -->
+          <div id="modal14" class="modal">
+            <div class="modal-card">
+              <span class="modal-close" onclick="closeModal('modal14')"
+                >&times;</span
+              >
+              <div class="popup-swiper swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      src="assets/images/14/14-thumbnail.png"
+                      alt="Slide 14"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/images/14/14a.png" alt="Slide 14" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/images/14/14b.png" alt="Slide 14" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/images/14/14c.png" alt="Slide 14" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/images/14/14d.png" alt="Slide 14" />
+                  </div>
+                  <div class="swiper-slide">
+                    <iframe
+                      src="assets/html/14/The Algorithm's Mirror.html"
+                      width="100%"
+                      height="500px"
+                    ></iframe>
+                  </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+
+              <div class="modal-content">
+                <h3 class="modal-title">Generative AI and Data Analytics</h3>
+                <div class="modal-info">
+                  <p>
+                    Generative AI refers to AI systems that create new content,
+                    such as text, images, or music, based on learned patterns
+                    from existing data, differing from traditional AI, which
+                    typically focuses on recognizing patterns and making
+                    predictions. Data analytics is transforming industries by
+                    enabling businesses to extract valuable insights from large
+                    datasets, improving decision-making, efficiency, and
+                    customer experiences. Ethical considerations with AI include
+                    concerns about privacy, bias in algorithms, job
+                    displacement, accountability for AI-driven decisions, and
+                    the potential misuse of AI for harmful purposes.
+                    <br />
+                    <br />
+                    You can read my fictional story
+                    <a
+                      href="assets/html/14/The Algorithm's Mirror.zip"
+                      download
+                      class="download-link"
+                      ><strong>here</strong></a
+                    >.
+                    <br />
+                    Also there is an interactive story, it's in the last slide.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Linking SwiperJS script-->
+          <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div id="contacts" class="footer-content fade-in">
+        <h3>Contact Me</h3>
+        <p>Get in touch</p>
+        <ul class="socials">
+          <li>
+            <a href="https://www.facebook.com/princejoseph.1112/"
+              ><i class="fa fa-facebook"></i
+            ></a>
+          </li>
+          <li>
+            <a href="mailto:princejosephmagdadaro@gmail.com"
+              ><i class="fa fa-envelope"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy;2024 Prince Magdadaro | All Rights Reserved |
+          <a href="#top" class="back-to-top">Back to Top?</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
